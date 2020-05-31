@@ -16,7 +16,7 @@ Complete
 
 #### Example:   
 
-![](Screenshot.png)
+![Alt text](/relative/path/to/Screenshot.png?raw=true "Screenshot")
 
 ## Installation and Setup Instructions
 
