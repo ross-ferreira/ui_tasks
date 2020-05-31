@@ -16,7 +16,7 @@ Complete
 
 #### Example:   
 
-![Alt text](/relative/path/to/Screenshot.png?raw=true "Screenshot")
+![Alt text](https://github.com/ross-ferreira/ui_tasks/blob/master/src/Screenshot.png?raw=true "Screenshot")
 
 ## Installation and Setup Instructions
 
