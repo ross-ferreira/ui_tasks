@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+@import '../src/css/loading.css';
+h1 {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+h2 {
+    font-size: 0.8em;
+    font-weight: 600;
+}
+h3 {
+    font-size: 0.75em;
+}
+p {
+    font-size: 0.65em;
+}
+p,h2,h1,h3{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+main {
+    height:386px;
+    width:266px;
+    margin: 20px auto;
+    padding:10px;
+    border: 3px solid grey;
+    border-radius: 10px;
+}
+/* Main Header */
+.main-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 20px;
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.completion-status{
+    color: white;
+    background-color: #FFBE22;
+    padding: 3px 7px;
+    border-radius: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+/* Task Styling */
+section{
+    overflow:scroll; 
+    max-height:280px;
+    max-width: 260px;
+}
+.task-wrapper {
+    display: grid;
+    /* grid-template-rows: 100px; */
+    grid-template-columns: 15px auto;
+    grid-gap: 5px;
+}
+
+.task-details {
+min-width: 200px;
+    
+}
+
+
+.div-div{
+    display: flex;
+    flex-direction: row;
+}
+.task-box{
+    width: 150px;
+}
+.headers{
+    display: flex;
+    flex-direction: row;
+}
+
+.task-header { 
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    min-width: 120px; 
   }
+
+.completion-icon {
+    position: relative; 
+    color: #FFBE22;
+    width: 15px; 
+    text-align: center; 
+    z-index: 2;
+    font-size: 1em;
+    background-color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.completion-icon::after {
+    position: absolute; 
+    border: 1px solid #FFBE22; 
+    width: 0; 
+    height: 100%; 
+    display: block; 
+    content: ''; 
+    left: 50%; 
+    z-index: -1; 
+    margin-left: -1px;
+}
+aside{
+    float: right;
+    width: 100%;
+}
+.date-format{
+    color: rgb(138, 130, 130);
+    text-align: right;
+    width: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Footer Styling */
+footer {
+    padding: 5px 10px;
+}
+progress[value] {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+     appearance: none;
+    width: 100%;
+    height: 10px;
+}
+progress[value]::-webkit-progress-bar {
+    background-color: #E7E6E2;
+}
+progress[value]::-webkit-progress-value {
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    background-color: #FFBE22;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

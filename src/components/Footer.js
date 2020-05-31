@@ -1,10 +1,15 @@
 import React from 'react'
 
-const Footer = () =>{
-
+const Footer = ({taskData}) =>{
+    const noCompTasks = taskData.tasks.filter(item => {
+        if (item.isComplete) {
+            return item
+        }
+    })
     return(
         <footer>
-            <progress value="22" max="100"></progress>
+            <h1>Progress:({Math.round((noCompTasks.length/taskData.tasks.length)*100)}%)</h1>
+            <progress value={noCompTasks.length} max={taskData.tasks.length}></progress>
         </footer>
     )
 }
