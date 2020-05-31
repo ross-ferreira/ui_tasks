@@ -35,6 +35,7 @@ main {
     padding-bottom: 20px;
     
 }
+
 .completion-status{
     color: white;
     background-color: #FFBE22;
@@ -42,30 +43,42 @@ main {
     border-radius: 15px;
 }
 
+
 /* Task Styling */
 section{
     overflow-y:scroll; 
     max-height:280px;
     max-width: 260px;
 }
+
+
 .task-wrapper {
     display: grid;
-    grid-template-rows: 26px 80px;
-    grid-template-columns: 15px 110px 100px;
+    grid-template-rows: 100px;
+    grid-template-columns: 15px auto;
     grid-gap: 5px;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start:1;
-    grid-column-end: 4;
 }
-.completion-icon{
-    grid-row: 1 / 3; 
+
+.task-details {
+min-width: 200px;
 }
-.task-details{
-    grid-row: 2 / 3;
-    grid-column: 2 / 4;
-    width: 180px; 
+
+
+.div-div{
+    display: flex;
+    flex-direction: row;
 }
+.task-box{
+    width: 150px;
+}
+.headers{
+    display: flex;
+    flex-direction: row;
+}
+
+.task-header { 
+    min-width: 120px; 
+  }
 .task-name{
     text-overflow: ellipsis;
     overflow: hidden; 
@@ -75,6 +88,7 @@ section{
 .completion-icon {
     position: relative; 
     color: #FFBE22;
+    width: 15px; 
     text-align: center; 
     z-index: 2;
     font-size: 1em;
@@ -92,15 +106,17 @@ section{
     z-index: -1; 
     margin-left: -1px;
 }
+aside{
+    float: right;
+    width: 100%;
+}
 .date-format{
     color: rgb(138, 130, 130);
     text-align: right;
+    width: 100px;
 }
 
-aside{
-    overflow-wrap: normal;
-    overflow: hidden; 
-}
+
 /* Footer Styling */
 footer {
     padding: 5px 10px;

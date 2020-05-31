@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react';
 
-const Header = ({taskData}) => {
-    const [status, setStatus] = useState("NOT STARTED")
-    const noCompTasks = taskData.tasks.filter(item => {
-        if (item.isComplete) {
-            return item
-        }
-    })
+const Header = ({ taskData,noCompTasks }) => {
+    const [status, setStatus] = useState("NOT STARTED");
+
     useEffect(() => {
         if (noCompTasks.length === taskData.tasks.length) {
             return setStatus("COMPLETED");
         } else if (noCompTasks.length > 0) {
             return setStatus("IN PROGRESS");
         } return setStatus("NOT STARTED");
-    }, taskData.tasks);
+    }, [taskData.tasks]);
+
 
     return (
         <header className="main-header">
